@@ -2,8 +2,18 @@
 % The latex Wikibook
 %Tex Stack Exchange
 %Latex Comunity
-\documentclass{article}
+\documentclass[12pt, landscape,letterpaper]{article}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\title{Curso de \LaTeX}
+\author{Sergio Cuevas}
+\date{\today}
 \begin{document}
+	
+	\maketitle
+	\begin{abstract}
+	Aquí va el resumen Aquí va el resumen Aquí va el resumen Aquí va el resumen Aquí va el resumen Aquí va el resumen Aquí va el resumen Aquí va el resumen Aquí va el resumen Aquí va el resumen Aquí va el resumen Aquí va el resumen Aquí va el resumen Aquí va el resumen Aquí va el resumen Aquí va el resumen 
+	\end{abstract}
 
 	Para añadir las comillas: ``Es necesario comenzar con acento grave y terminar con apóstrofe"
 	
@@ -25,8 +35,56 @@ La anterior ecuación se describe apartando un entorno especial para ello con la
 
 Otros entornos son itemize y enumerate
 
-En caso de querer emplear otros paquetes será necesario declararlo al inicio del código con la función usepackage
+En caso de querer emplear otros paquetes será necesario declararlo al inicio del código con la función usepackage.
 
+Con ello podemos usar funciones como las siguientes:
+
+Para ecuaciones que no queremos que sean numeradas:
+
+\begin{equation*}
+	\Omega=\sum_{k=1}^{n} \omega_k
+\end{equation*}
+
+Hay ocasiones en las que requerimos que las letras no sean tratadas como variables multiplicadas entre sí, si no como un comando de operador matemático:
+Por ejemplo
+
+\begin{equation*}
+	\min_{x,y}{x+y}
+\end{equation*}
+
+
+\begin{equation*}
+	\frac{\operatorname{Cov}(R_i, R_m)}{\operatorname{Var}(R_m)}
+\end{equation*}
+
+
+Para poder alinear las operaciones con respecto a los signos igual
+
+\begin{align*}
+	(x+1)^3 &=(x+1)(x+1)(x+1)\\
+			&=(x+1)(x^2+2x+1)\\
+			&=(x^3+3x^2+3x+1)
+\end{align*}
+
+Ejercicio 2
+
+Sea $X_1,X_,...,X_n$ una sucesiópn de variables aleatorias independientes e idénticamente distribuidas con $\operatorname{E}[X_i]=\mu$ i $\operatorname{Var}[X_i]=\sigma^2 < \infty$, y sea
+\begin{equation*}
+	S_n=\frac{1}{n}\sum_{i}^{n}X_i
+\end{equation*}
+
+su media. Entonces, cuando n tiende a infinito, las variables aliatories $\sqrt{n}(S_n-\mu)$ convergen a una distribución normal $N(0,\sigma^2)$
+
+Atributos modificables del documento
+
+en ``documentclass" agregamos entre corchetes los atributos
+
+tamaño de fuente : 10pt
+tamaño del papel:	a4paper
+doscolumnas:	twocolumn
+en forma apaisada:	landscape
+a dos caras:	Twoside
+características de borrador para manipulación de versión: draft
 
 
 \end{document}

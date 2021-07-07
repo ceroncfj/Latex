@@ -1,0 +1,62 @@
+
+%% PARA PODER HACER ETIQUETAS Y REFERENCIAS CRUZADAS USAMOS \label{key} y \ref{label} y para las ecuaciones del paquete amsmath usamos \eqref
+
+
+\documentclass{article}
+
+
+\usepackage[spanish]{babel}%Para indicar que autor, título, etc son títulos en castellano
+\usepackage{amsmath}
+
+
+\title{Dando formato al proyecto}
+
+\author{Sergio A. Cuevas Cerón}
+
+\date{\today}
+
+
+
+
+\begin{document}
+\maketitle %Inicializamos el título, autor y fecha
+
+\begin{abstract}
+	Ejemplo práctico de formato a documento en \LaTeX
+\end{abstract}
+
+\section{Introducción}
+\label{sec:intro}
+
+Más adelante en la sección \ref{sec:sec2}
+Una fómula muy interesante es
+
+\begin{equation}
+\label{equ:euler}
+	e^{i\pi}+1=0
+\end{equation}
+
+\subsection{Estado del arte}
+
+Vamos a describir en que conciste la introduccón de el lenguaje latex $\ldots$
+
+\subsection{Limitaciones de los proyectos actuales}
+
+\subsubsection{Esta es una subsubseccion}
+
+\section{Sección 2 del reporte}
+\label{sec:sec2}
+
+\subsection{esta es una subseccion de la seccion 2}
+
+En este apartado abordaremos lo visto en la ecuación \ref{equ:euler}
+
+\section{Listado de letras griegas}
+\begin{itemize} %% NOS PERMITE CREAR UN LISTADO
+	\item $\alpha$
+	\item $\beta$
+	\item $\gamma$
+
+\end{itemize}
+
+\end{document}
